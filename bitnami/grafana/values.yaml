@@ -233,7 +233,7 @@ config:
   useGrafanaIniFile: false
   grafanaIniConfigMap: ""
   grafanaIniSecret: ""
-## Create dasboard provider to load dashboards, a default one is created to load dashboards
+## Create dashboard provider to load dashboards, a default one is created to load dashboards
 ## from "/opt/bitnami/grafana/dashboards"
 ## @param dashboardsProvider.enabled Enable the use of a Grafana dashboard provider
 ## @param dashboardsProvider.configMapName Name of a ConfigMap containing a custom dashboard provider
@@ -247,7 +247,7 @@ dashboardsProvider:
 ## @param dashboardsConfigMaps Array with the names of a series of ConfigMaps containing dashboards files
 ## They will be mounted by the default dashboard provider if it is enabled
 ## Use an array with the configMap names.
-## In order to use subfolders, uncomment "#foldersFromFilesStructure: true" line in default provider config. or create your own dashboard provider.
+## In order to use subfolders, uncomment "#foldersFromFilesStructure: true" line in default provider config or create your own dashboard provider.
 ## Example:
 ## dashboardsConfigMaps:
 ##   - configMapName: mydashboard
@@ -276,13 +276,13 @@ datasources:
   ##     isDefault: true
   ##
   secretDefinition: {}
-## Create notifiers from a configMap
+## Create notifiers from a ConfigMap
 ## The notifiersName must contain the files
 ## @param notifiers.configMapName Name of a ConfigMap containing Grafana notifiers configuration
 ##
 notifiers:
   configMapName: ""
-## Create alerting rules, contact points, notification policies, templates, and mute timings from a configMap
+## Create alerting rules, contact points, notification policies, templates, and mute timings from a ConfigMap
 ## @param alerting.configMapName Name of a ConfigMap containing Grafana alerting configuration
 ##
 alerting:
